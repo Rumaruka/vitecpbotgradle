@@ -14,7 +14,7 @@ import net.dv8tion.jda.api.JDABuilder;
 public class VitecPBot {
 
     public static void main(String args[]) throws Exception {
-        JDA bot = new JDABuilder(AccountType.BOT).setToken("NTI5NjY5OTcwMjA5Mjc1OTQ0.Dw0QVA.CMq1Av794mZhV_FlPTcVXxOND2g").build();
+        JDA bot = new JDABuilder(AccountType.BOT).setToken("NTI5NjY5OTcwMjA5Mjc1OTQ0.XhXiyA.0fHz4Wpo0sggrrC8dqJBSVLdwZ4").build();
         bot.addEventListener(new EventBotListener());
         bot.addEventListener(new Calculate());
         bot.addEventListener(new HelpCommand());
