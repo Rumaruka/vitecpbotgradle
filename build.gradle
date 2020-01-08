@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '4.0.4'
+}
+apply plugin: 'com.github.johnrengelman.shadow'
+mainClassName = 'com.rumaruka.vpbot.setup.VitecPBot'
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.rumaruka.vpbot.setup.VitecPBot'
+        )
+    }
+}
+
+group 'vitecpbot'
+version '0.3a'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'net.dv8tion:JDA:4.1.0_95'
+    
+}
+shadowJar {
+    mainClassName = 'com.rumaruka.vpbot.setup.VitecPBot'
+    classifier = 'fat'
+  
+}
+
+
+
+compileJava.options.encoding = 'UTF-8'
