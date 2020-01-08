@@ -1,0 +1,1 @@
+web: java -jar libs/vitecpbot-0.3a-all.jar
